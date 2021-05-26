@@ -1,0 +1,926 @@
+:root {
+	--brown1: #f0e5df;
+	--brown2: #d8c6ba;
+	--brown3: #c5ab9e;
+	--brown4: #944328;
+}
+
+*:before,
+*:after {
+	position: absolute;
+	content: "";
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(180deg, #178ce8, #bfe2ff 50%, transparent 50%),
+		linear-gradient(
+			to top,
+			#0a190b 0%,
+			#255226 18%,
+			#8bc34a 49%,
+			#1e6f20b3 50%,
+			transparent 50%
+		);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	perspective: 100vmin;
+}
+
+body *,
+*:before,
+*:after {
+	box-sizing: border-box;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+.dog {
+	width: 80vmin;
+	height: 60vmin; /*
+    background: url(./pointer2.jpg) no-repeat center center;
+    background-size: cover;
+	transform: scale(1.75);*/
+}
+
+.dog div,
+.dog span,
+.dog *:before,
+.dog *:after {
+	background: var(--brown1);
+}
+
+.dog.shadow {
+	filter: brightness(0) drop-shadow(0px 0px 2px black)
+		drop-shadow(0px 0px 2px black);
+	transform: rotateX(65deg) rotateZ(-1deg)
+		translate3d(-9.5vmin, 4.75vmin, -10vmin) scale3d(0.82, 0.85, 1) skewX(25deg);
+	transform-style: preserve-3d;
+	z-index: -2;
+	opacity: 0.15;
+}
+
+.dog .body {
+	width: 25vmin;
+	height: 19.5vmin;
+	left: 14vmin;
+	top: 15.5vmin;
+	border-radius: 0 1vmin 10vmin 12vmin;
+	transform: rotate(6deg);
+	background: radial-gradient(
+			ellipse at 2.53% 3%,
+			var(--brown4) 0.15vmin,
+			transparent 0.2vmin
+		),
+		radial-gradient(ellipse at 2% 2%, var(--brown4) 0.2vmin, transparent 0.25vmin),
+		radial-gradient(
+			circle at 21% 37%,
+			var(--brown4) 0.2vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			circle at 21% 38%,
+			var(--brown4) 0.25vmin,
+			transparent 0.3vmin
+		),
+		radial-gradient(
+			ellipse at 16% 57%,
+			var(--brown4) 0.25vmin,
+			transparent 0.35vmin
+		),
+		radial-gradient(
+			circle at 13% 33%,
+			var(--brown4) 0.2vmin,
+			transparent 0.275vmin
+		),
+		radial-gradient(
+			ellipse at 51% 95%,
+			var(--brown4) 0.2vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			ellipse at 36% 69%,
+			var(--brown4) 0.25vmin,
+			transparent 0.3vmin
+		),
+		radial-gradient(
+			ellipse at 42% 85%,
+			var(--brown4) 0.15vmin,
+			transparent 0.2vmin
+		),
+		radial-gradient(
+			ellipse at 38% 25%,
+			var(--brown4) 0.2vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			ellipse at 42% 49%,
+			var(--brown4) 0.3vmin,
+			transparent 0.35vmin
+		),
+		var(--brown1) !important;
+}
+
+.dog .body:before {
+	width: 10vmin;
+	height: 4vmin;
+	transform: rotate(16deg) translate(3vmin, -2vmin);
+}
+
+.dog .body:after {
+	background: radial-gradient(
+			ellipse at 44% 36%,
+			var(--brown4) 0.3vmin,
+			transparent 0.5vmin
+		),
+		radial-gradient(
+			ellipse at 43% 40%,
+			var(--brown4) 0.5vmin,
+			transparent 0.65vmin
+		),
+		var(--brown1) !important;
+	width: 14vmin;
+	height: 4vmin;
+	transform: rotate(-34deg) translate(7vmin, 18.75vmin);
+	border-bottom-left-radius: 3vmin;
+}
+
+.dog .body span {
+	background: radial-gradient(
+			circle at 31.45% 15.5%,
+			var(--brown4) 0.175vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			ellipse at 51% 14%,
+			var(--brown4) 0.2vmin,
+			transparent 0.3vmin
+		),
+		radial-gradient(circle at 32% 14%, var(--brown4) 0.2vmin, transparent 0.3vmin),
+		radial-gradient(
+			ellipse at 40% 36%,
+			var(--brown4) 0.25vmin,
+			transparent 0.35vmin
+		),
+		radial-gradient(circle at 64% 33%, var(--brown4) 14%, transparent 14.5%),
+		radial-gradient(circle at 65% 26%, var(--brown4) 14%, transparent 14.5%),
+		radial-gradient(circle at 66% 23%, var(--brown4) 14%, transparent 14.5%),
+		radial-gradient(circle at 68% 23%, var(--brown4) 14%, transparent 14.5%),
+		radial-gradient(circle at 73% 19%, var(--brown4) 12%, transparent 12.5%),
+		radial-gradient(circle at 82% 18%, var(--brown4) 10%, transparent 10.5%),
+		var(--brown1) !important;
+	width: 27vmin;
+	height: 11.5vmin;
+	left: 17.25vmin;
+	transform: rotate(-5deg);
+	top: -1vmin;
+	border-top-right-radius: 12vmin;
+}
+
+.dog .body span:before {
+	width: 5vmin;
+	height: 2vmin;
+	left: 11vmin;
+	top: 9.95vmin;
+	transform: rotate(-19deg);
+}
+
+.dog .body .spots {
+	width: 12vmin;
+	height: 19.5vmin;
+	left: 9.75vmin;
+	top: -0.5vmin;
+	border-radius: 15vmin 8vmin 10vmin 12vmin;
+	transform: rotate(15deg);
+	z-index: 1;
+	background: radial-gradient(
+			ellipse at 55% 62%,
+			var(--brown4) 36%,
+			transparent 37%
+		),
+		radial-gradient(ellipse at 48% 59%, var(--brown4) 36%, transparent 37%),
+		radial-gradient(ellipse at 47% 39%, var(--brown4) 36%, transparent 37%),
+		radial-gradient(circle at 48% 31%, var(--brown4) 29%, transparent 30%),
+		radial-gradient(ellipse at 57% 53%, var(--brown4) 36%, transparent 37%),
+		radial-gradient(circle at 58% 20%, var(--brown4) 20%, transparent 21%),
+		radial-gradient(circle at 69% 15%, var(--brown4) 14%, transparent 15%) !important;
+}
+
+.dog .body .spots:before {
+	width: 4vmin;
+	height: 7vmin;
+	top: 10.5vmin;
+	border: 0.25vmin solid transparent;
+	border-radius: 46%;
+	transform: rotate(-36deg);
+	left: -2.5vmin;
+	background: transparent !important;
+	filter: blur(0.25px);
+	border-left: 0.4vmin solid var(--brown2);
+}
+
+.dog .body .spots:after {
+	width: 1vmin;
+	height: 2.5vmin;
+	top: 3vmin;
+	border: 0.25vmin solid var(--brown2);
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-radius: 23%;
+	border-bottom-color: transparent;
+	transform: rotate(122deg);
+	left: 20.75vmin;
+	background: transparent !important;
+	filter: blur(0.25px);
+	border-left-width: 0.35vmin;
+}
+
+.dog .neck {
+	background: radial-gradient(
+		circle at -5% -7%,
+		var(--brown4) 20.5%,
+		var(--brown1) 21.5%
+	) !important;
+	width: 6vmin;
+	height: 13vmin;
+	left: 13vmin;
+	top: 12vmin;
+	transform: rotate(-26deg);
+}
+
+.dog .neck::before {
+	background: radial-gradient(
+			ellipse at 63% 55%,
+			var(--brown4) 0.15vmin,
+			transparent 0.2vmin
+		),
+		radial-gradient(circle at 27% 29%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 8% 29.5%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 19% 30%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 43% 28%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 25% 28%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 60% 25%, var(--brown4) 20%, transparent 20.5%),
+		radial-gradient(circle at 64% 22%, var(--brown4) 22%, transparent 22.5%),
+		linear-gradient(137deg, var(--brown4) 6vmin, var(--brown1) 5.1vmin) !important;
+	width: 9vmin;
+	height: 18vmin;
+	transform: rotate(-15deg) translate(2.7vmin, -7vmin);
+	border-radius: 5vmin;
+}
+
+.dog .neck::after {
+	width: 1vmin;
+	height: 5vmin;
+	transform: rotate(13deg) translate(0.95vmin, 6vmin);
+	border-radius: 5vmin;
+}
+
+.dog .head {
+	background: radial-gradient(
+			circle at 12% 107%,
+			var(--brown4) 60%,
+			transparent 20.5%
+		),
+		radial-gradient(circle at 65% -50%, var(--brown4) 60%, transparent 20.5%) !important;
+	width: 10.5vmin;
+	height: 8vmin;
+	top: 3.85vmin;
+	left: 5.5vmin;
+	border-radius: 5vmin 4vmin 0 0;
+}
+
+.dog .head:before {
+	background: radial-gradient(
+		circle at 12% 107%,
+		var(--brown4) 60%,
+		transparent 20.5%
+	) !important;
+	width: 6vmin;
+	height: 5vmin;
+	top: 6.5vmin;
+	left: 3.85vmin;
+	transform: rotate(58deg);
+}
+
+.dog .mouth {
+	background: radial-gradient(
+			circle at 34% 37%,
+			var(--brown4) 2.25%,
+			transparent 3.5%
+		),
+		radial-gradient(circle at 42% 56%, var(--brown4) 2.5%, transparent 3.5%),
+		radial-gradient(circle at 22% 54%, var(--brown4) 2.25%, transparent 3%),
+		radial-gradient(circle at 104% 89%, var(--brown4) 20%, transparent 20.75%),
+		radial-gradient(circle at 78% 13%, var(--brown4) 20%, transparent 21.75%),
+		radial-gradient(circle at 105% 34%, var(--brown4) 30%, transparent 31.75%),
+		radial-gradient(circle at 85% 25%, var(--brown4) 20%, transparent 22.75%),
+		radial-gradient(circle at 97% 52%, var(--brown4) 20%, transparent 22.75%),
+		radial-gradient(circle at 97% 52%, var(--brown4) 20%, transparent 22.75%),
+		radial-gradient(circle at 102% 64%, var(--brown4) 20%, transparent 22.75%),
+		radial-gradient(circle at 104% 77%, var(--brown4) 20%, transparent 21.75%),
+		linear-gradient(270deg, var(--brown4) 1vmin, var(--brown1) 1vmin) !important;
+	width: 6vmin;
+	height: 6.05vmin;
+	left: -4.65vmin;
+	top: 2.4vmin;
+	border-radius: 0.85vmin 0.5vmin 0.75vmin 4vmin;
+	transform: rotate(-1deg);
+}
+
+.dog .mouth:before {
+	background: var(--brown4) !important;
+	width: 2vmin;
+	height: 1vmin;
+	top: 4.8vmin;
+	left: 5.5vmin;
+	transform: rotate(-10deg);
+}
+
+.dog .mouth:after {
+	background: var(--brown4) !important;
+	width: 2vmin;
+	height: 1vmin;
+	top: 4.8vmin;
+	left: 6.5vmin;
+	transform: rotate(18deg);
+}
+
+.dog .nose {
+	background: radial-gradient(
+			ellipse at 26% 77%,
+			#313131 0.25vmin,
+			transparent 0.275vmin
+		),
+		#523930 !important;
+	width: 1.7vmin;
+	height: 1.65vmin;
+	top: 2.35vmin;
+	left: -4.68vmin;
+	border-radius: 0.5vmin 0.25vmin 0.98vmin 0.31vmin;
+	transform: rotate(-5deg);
+}
+
+.dog .nose::after {
+	background: transparent !important;
+	width: 4vmin;
+	height: 1.5vmin;
+	border-radius: 100%;
+	border-bottom: 0.5vmin solid #793b25;
+	top: 3.35vmin;
+	left: 0.2vmin;
+	transform: rotate(21deg);
+}
+
+.dog .ears {
+	background: #793b25 !important;
+	width: 4vmin;
+	height: 8.5vmin;
+	left: 4.5vmin;
+	top: 1vmin;
+	transform: rotate(6deg);
+	border-radius: 15% 150% 250%;
+	z-index: 1;
+}
+
+.dog .ears:before {
+	background: #793b25 !important;
+	width: 2vmin;
+	height: 5.75vmin;
+	left: -0.25vmin;
+	top: 2.85vmin;
+	transform: rotate(-5deg);
+	border-radius: 150% 150% 150%;
+}
+
+.dog .ears:after {
+	background: #793b25 !important;
+	width: 0.75vmin;
+	height: 1.75vmin;
+	left: -0.1vmin;
+	top: 0.05vmin;
+	transform: rotate(-23deg);
+	border-radius: 100%;
+}
+
+.dog .eyes {
+	background: #212121 !important;
+	width: 0.65vmin;
+	height: 1vmin;
+	left: 1.35vmin;
+	top: 1.9vmin;
+	transform: rotate(6deg);
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.dog .eyes:before {
+	background: #ffffff !important;
+	width: 0.25vmin;
+	height: 0.35vmin;
+	left: 0.325vmin;
+	top: -0.05vmin;
+	transform: rotate(-5deg);
+	border-radius: 100%;
+}
+
+.dog .eyes:after {
+	background: #793b25 !important;
+	width: 1.05vmin;
+	height: 0.65vmin;
+	left: 0.25vmin;
+	top: -1.15vmin;
+	transform: rotate(-18deg);
+	border-radius: 100%;
+}
+
+.dog .tail {
+	width: 6.5vmin;
+	height: 1.75vmin;
+	left: 52vmin;
+	top: 19.35vmin;
+	transform: rotate(30deg);
+	border-radius: 40% 23% 0%;
+	z-index: -1;
+}
+
+.dog .tail:before {
+	width: 7vmin;
+	height: 1.75vmin;
+	left: 5vmin;
+	top: 0.2vmin;
+	transform: rotate(5deg);
+	border-radius: 31%;
+}
+
+.dog .tail:after {
+	width: 7vmin;
+	height: 1.6vmin;
+	left: 10vmin;
+	top: 0.95vmin;
+	transform: rotate(7deg);
+	border-radius: 31% 100% 100% 31%;
+}
+
+.dog .tail span {
+	width: 6vmin;
+	height: 1.5vmin;
+	left: 14vmin;
+	top: 1.25vmin;
+	transform: rotate(3deg);
+	border-radius: 40% 150% 100% 75%;
+}
+
+.dog .tail span:before {
+	width: 3vmin;
+	height: 1.2vmin;
+	left: 4.25vmin;
+	top: 0.2vmin;
+	transform: rotate(-2deg);
+	border-radius: 31%;
+}
+
+.dog .tail span:after {
+	width: 3vmin;
+	height: 1.15vmin;
+	left: 6.25vmin;
+	top: 0.19vmin;
+	transform: rotate(-8deg);
+	border-radius: 31%;
+}
+
+.dog .tail span + span {
+	left: 22vmin;
+	width: 3vmin;
+	height: 1.08vmin;
+	transform: rotate(-13deg);
+	top: 1.45vmin;
+}
+
+.dog .tail span + span:before {
+	left: 1.52vmin;
+	width: 3vmin;
+	height: 1.1vmin;
+	transform: rotate(-8deg);
+	top: -0.075vmin;
+	border-radius: 35%;
+}
+
+.dog .tail span + span:after {
+	left: 3.75vmin;
+	width: 3vmin;
+	height: 1vmin;
+	transform: rotate(-13deg);
+	top: -0.525vmin;
+	border-radius: 30% 100% 100% 30%;
+	background: linear-gradient(70deg, transparent 37%, var(--brown4) 45%),
+		linear-gradient(114deg, var(--brown1) 37%, var(--brown4) 45%) !important;
+}
+
+.dog .leg1 {
+	background: linear-gradient(225deg, var(--brown3) 65%, var(--brown2) 65.5%),
+		var(--brown2) !important;
+	width: 20vmin;
+	height: 4.85vmin;
+	top: 31.5vmin;
+	left: 12.25vmin;
+	transform: rotate(-13deg);
+	border-radius: 100%;
+	z-index: -1;
+}
+
+.dog .leg1:before {
+	background: var(--brown2) !important;
+	width: 9vmin;
+	height: 2.25vmin;
+	transform: rotate(40deg);
+	border-radius: 2vmin 100% 100% 4vmin;
+	top: 3.75vmin;
+	left: -0.87vmin;
+}
+
+.dog .leg1:after {
+	background: var(--brown2) !important;
+	width: 4.5vmin;
+	height: 2.025vmin;
+	transform: rotate(6deg);
+	border-radius: 0vmin 500% 7vmin 15vmin;
+	top: 6.3vmin;
+	left: 5.5vmin;
+}
+
+.dog .leg1 span {
+	background: var(--brown2) !important;
+	width: 3vmin;
+	height: 1.85vmin;
+	top: 6.7vmin;
+	left: 7.75vmin;
+	transform: rotate(0deg);
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.dog .leg1 span:before {
+	background: var(--brown2) !important;
+	width: 3.5vmin;
+	height: 1vmin;
+	transform: rotate(30deg);
+	border-radius: 4vmin;
+	top: -0.8vmin;
+	left: -2.75vmin;
+}
+
+.dog .leg1 span:after {
+	width: 1.5vmin;
+	height: 0.25vmin;
+	transform: rotate(-13deg);
+	top: 0.5vmin;
+	left: 1.05vmin;
+	border: 0.255vmin solid transparent;
+	border-radius: 40%;
+	border-bottom-color: #b7a7a1;
+	background-color: transparent !important;
+}
+
+.dog .leg2 {
+	background: var(--brown1);
+	width: 1.65vmin;
+	height: 20vmin;
+	top: 34.25vmin;
+	left: 27.65vmin;
+	transform: rotate(1deg);
+	border-radius: 0 20% 26%;
+}
+
+.dog .leg2:before {
+	background: radial-gradient(
+			circle at 50% 31%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 50% 30%,
+			var(--brown4) 0.1vmin,
+			transparent 0.15vmin
+		),
+		radial-gradient(
+			circle at 31% 54%,
+			var(--brown4) 0.175vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			circle at 28% 55%,
+			var(--brown4) 0.125vmin,
+			transparent 0.2vmin
+		),
+		var(--brown1) !important;
+	width: 2vmin;
+	height: 20vmin;
+	transform: rotate(-10deg);
+	left: -1.25vmin;
+	border-radius: 0 0 100%;
+}
+
+.dog .leg2:after {
+	background: radial-gradient(
+			circle at 76% 37%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 73% 38%,
+			var(--brown4) 0.15vmin,
+			transparent 0.2vmin
+		),
+		radial-gradient(
+			circle at 41% 82%,
+			var(--brown4) 0.175vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			circle at 36% 83%,
+			var(--brown4) 0.125vmin,
+			transparent 0.2vmin
+		),
+		var(--brown1) !important;
+	width: 2vmin;
+	height: 10vmin;
+	transform: rotate(-10deg);
+	left: -1vmin;
+	border-radius: 0 0 100%;
+}
+
+.dog .leg2 span {
+	width: 3vmin;
+	height: 2vmin;
+	top: 18.85vmin;
+	border-radius: 100% 75% 70% 30%;
+	left: -1.5vmin;
+	transform: rotate(-4deg);
+}
+
+.dog .leg2 span:after {
+	width: 1.25vmin;
+	height: 0.25vmin;
+	transform: rotate(107deg);
+	top: 0.9vmin;
+	left: 0.1vmin;
+	border: 0.255vmin solid transparent;
+	border-radius: 50%;
+	border-bottom-color: #d8c9c4;
+	background-color: transparent !important;
+}
+
+.dog .leg3 {
+	background: radial-gradient(
+			circle at 37% 5%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 35% 4%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		var(--brown1) !important;
+	width: 5vmin;
+	height: 10vmin;
+	top: 27vmin;
+	left: 53.95vmin;
+	transform: rotate(-7deg);
+	border-bottom-left-radius: 10%;
+}
+
+.dog .leg3:before {
+	background: radial-gradient(
+			circle at 54% 77.75%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 55% 79%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 82% 97%,
+			var(--brown4) 0.15vmin,
+			transparent 0.25vmin
+		),
+		radial-gradient(
+			circle at 85% 98%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		var(--brown1) !important;
+	width: 5vmin;
+	height: 12vmin;
+	transform: rotate(-27deg);
+	top: -2vmin;
+	left: -2.75vmin;
+	border-bottom-left-radius: 21%;
+	z-index: 1;
+}
+
+.dog .leg3:after {
+	background: radial-gradient(
+			circle at 56% 67%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 57% 68%,
+			var(--brown4) 0.115vmin,
+			transparent 0.215vmin
+		),
+		radial-gradient(
+			circle at 96% 53%,
+			var(--brown4) 0.125vmin,
+			transparent 0.225vmin
+		),
+		radial-gradient(
+			circle at 97% 54%,
+			var(--brown4) 0.115vmin,
+			transparent 0.215vmin
+		),
+		var(--brown1) !important;
+	width: 6.25vmin;
+	height: 12vmin;
+	transform: rotate(-30deg);
+	top: 5vmin;
+	left: 1.085vmin;
+	border-bottom-left-radius: 100%;
+	border-top-left-radius: 5%;
+}
+
+.dog .leg3 span {
+	width: 5vmin;
+	height: 11vmin;
+	transform: rotate(-40deg);
+	border-radius: 20%;
+	top: 7.6vmin;
+	left: 4.5vmin;
+	border-bottom-left-radius: 70%;
+}
+.dog .leg3 span:before {
+	width: 2.25vmin;
+	height: 12vmin;
+	transform: rotate(34deg);
+	border-radius: 10%;
+	top: 8.9vmin;
+	left: -0.8vmin;
+	border-bottom-left-radius: 91%;
+	border-bottom-right-radius: 15%;
+}
+.dog .leg3 span:after {
+	width: 1.75vmin;
+	height: 11.5vmin;
+	transform: rotate(23deg);
+	border-radius: 10%;
+	top: 9vmin;
+	left: -0.75vmin;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 55%;
+}
+
+.dog .leg3 span + span {
+	width: 2.5vmin;
+	height: 1.75vmin;
+	top: 26.5vmin;
+	left: 10.5vmin;
+	transform: rotate(4deg);
+	border-radius: 100% 100% 100% 40%;
+}
+
+.dog .leg3 span + span:after {
+	width: 1.25vmin;
+	height: 0.5vmin;
+	transform: rotate(106deg);
+	top: 0.6vmin;
+	left: 0.15vmin;
+	border: 0.255vmin solid transparent;
+	border-radius: 100%;
+	border-bottom-color: #d8c9c4;
+	background-color: transparent !important;
+}
+
+.dog .leg4 {
+	z-index: -1;
+	background: linear-gradient(196deg, var(--brown3) 35%, var(--brown2) 36%),
+		var(--brown2) !important;
+	width: 5vmin;
+	height: 13vmin;
+	top: 25vmin;
+	left: 48vmin;
+	transform: rotate(-31deg);
+	border-bottom-left-radius: 25%;
+}
+
+.dog .leg4:before {
+	background: var(--brown2) !important;
+	width: 5vmin;
+	height: 13vmin;
+	top: 9vmin;
+	left: 2vmin;
+	transform: rotate(-25deg);
+	border-radius: 25% 0 0 34%;
+}
+
+.dog .leg4:after {
+	background: var(--brown2) !important;
+	width: 2.13vmin;
+	height: 15vmin;
+	top: 18vmin;
+	left: 5.25vmin;
+	transform: rotate(16deg);
+	border-radius: 0 0 28% 57%;
+}
+
+.dog .leg4 span {
+	background: var(--brown2) !important;
+	width: 1.5vmin;
+	height: 15vmin;
+	top: 18vmin;
+	transform: rotate(4deg);
+	border-radius: 0 0 83%;
+	left: 4.75vmin;
+}
+
+.dog .leg4 span:before {
+	background: var(--brown2) !important;
+	width: 2.5vmin;
+	height: 1.75vmin;
+	top: 13.5vmin;
+	left: -1.75vmin;
+	transform: rotate(32deg);
+	border-radius: 100% 100% 100% 40%;
+}
+
+.dog .leg4 span:after {
+	width: 1.35vmin;
+	height: 0.5vmin;
+	transform: rotate(136deg);
+	top: 14vmin;
+	left: -1.95vmin;
+	border: 0.255vmin solid transparent;
+	border-radius: 100%;
+	border-bottom-color: #b7a7a1;
+	background: transparent !important;
+}
+
+input:checked ~ .dog div,
+input:checked ~ .dog .body .spots,
+input:checked ~ .dog .tail span + span:after,
+input:checked ~ .dog span,
+input:checked ~ .dog *:before,
+input:checked ~ .dog *:after {
+	background: var(--brown1) !important;
+	opacity: 0.75;
+	border: 1px solid #0000004d !important;
+	box-sizing: border-box;
+}
+
+input,
+.dog::after,
+.dog::before,
+.dog .head::after,
+.leg2 span:before,
+.head .nose:before,
+.body span:after,
+.dog .leg3 span + span:before {
+	display: none;
+}
+
+label {
+	bottom: 5vmin;
+	color: #fff;
+	font-family: Arial, Helvetica, serif;
+	padding: 1vmin 1.5vmin;
+	font-size: 1.55vmin;
+	border: 1px solid #ffffffab;
+	border-radius: 2px;
+	background: #ffffff2e;
+	box-shadow: 0 0 1px 0px #fff;
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+label:before {
+	content: "SHOW";
+	position: relative;
+	margin-right: 1vmin;
+}
+
+label:hover {
+	opacity: 1;
+}
+
+input:checked + label:before {
+	content: "HIDE";
+}
